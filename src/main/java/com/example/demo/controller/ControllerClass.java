@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 
@@ -10,20 +11,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.repository.ValidationRepo;
-import com.example.demo.validation.WorkRequestTypeMetaData;
 
 @RestController
 public class ControllerClass {
 
-	@Autowired
-	ValidationRepo vr;
+
 	
 
 	@RequestMapping(value = "/validate", method = RequestMethod.POST)
 	public void addValues(@RequestBody HashMap<String,Object> hm) {
-
-		Object value = null;
+		//extract wR type from hash map received.
+		String value = null;
 		System.out.println(hm.toString());
 		if(hm.containsKey("WorkRequestType"))
 		{
@@ -31,8 +29,13 @@ public class ControllerClass {
 			System.out.println("WorkRequestType: "+value);
 		}
 		
-		List<WorkRequestTypeMetaData> list=vr.findByWorkRequestType((String) value);
-		System.out.println(list);
+//		List<WorkRequestTypeMetaData> list=vr.findByWorkRequestType((String) value);
+//		System.out.println(list);
+		
+		//get all the common format attr for that work req type
+		
+		//validate for :
+		//1. mandatory fields (required or not)
 		
 	}
 }
