@@ -1,10 +1,18 @@
 package com.example.demo.pojos;
 
 public class CommonFormatAttributeMetaData {
+	
 	String attributeName;
 	boolean isRequired;
 	String dataType;
 	
+	
+	public CommonFormatAttributeMetaData(String attributeName, boolean isRequired, String dataType) {
+		super();
+		this.attributeName = attributeName;
+		this.isRequired = isRequired;
+		this.dataType = dataType;
+	}
 	public String getAttributeName() {
 		return attributeName;
 	}

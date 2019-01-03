@@ -9,6 +9,11 @@ public class Work_Request_Type_Master {
 	@Id
 	private int W_Id;
 	private String Work_Request_Type;
+	private boolean ignoreAditionalAttributes;
+	
+	
+	
+	
 	
 	public Work_Request_Type_Master()
 	{
@@ -40,6 +45,14 @@ public class Work_Request_Type_Master {
 	@Override
 	public String toString() {
 		return "Work_Request_Type_Master [Id=" + W_Id + ", Work_Request_Type=" + Work_Request_Type + "]";
+	}
+
+	public boolean isIgnoreAditionalAttributes() {
+		return ignoreAditionalAttributes;
+	}
+
+	public void setIgnoreAditionalAttributes(boolean ignoreAditionalAttributes) {
+		this.ignoreAditionalAttributes = ignoreAditionalAttributes;
 	}
 	
 	

@@ -17,14 +17,19 @@ public class Axcis_Report_Column {
 	private File_Info File_Id;
 	@OneToOne
 	@JoinColumn(name="C_Id")
-	private Standard_Object_Mapping_Master Mapping_Column;
+	private Standard_Object_Attributes Mapping_Column;
+	
+	
+	
+	
+	
 	
 	public Axcis_Report_Column()
 	{
 		
 	}
 
-	public Axcis_Report_Column(int id, String columns, File_Info file_Id, Standard_Object_Mapping_Master mapping_Column) {
+	public Axcis_Report_Column(int id, String columns, File_Info file_Id, Standard_Object_Attributes mapping_Column) {
 		super();
 		Id = id;
 		this.columns = columns;
@@ -56,11 +61,11 @@ public class Axcis_Report_Column {
 		File_Id = file_Id;
 	}
 
-	public Standard_Object_Mapping_Master getMapping_Column() {
+	public Standard_Object_Attributes getMapping_Column() {
 		return Mapping_Column;
 	}
 
-	public void setMapping_Column(Standard_Object_Mapping_Master mapping_Column) {
+	public void setMapping_Column(Standard_Object_Attributes mapping_Column) {
 		Mapping_Column = mapping_Column;
 	}
 

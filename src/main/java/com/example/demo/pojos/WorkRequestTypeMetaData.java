@@ -8,6 +8,17 @@ public class WorkRequestTypeMetaData {
 	
 	
 	
+	public WorkRequestTypeMetaData() {
+		super();
+	}
+	public WorkRequestTypeMetaData(String workRequestType, int workRequestTypeId, boolean ignoreAdditionalAttributes,
+			CommonFormatAttributeMetaData[] attributes) {
+		super();
+		this.workRequestType = workRequestType;
+		this.workRequestTypeId = workRequestTypeId;
+		this.ignoreAdditionalAttributes = ignoreAdditionalAttributes;
+		this.attributes = attributes;
+	}
 	public String getWorkRequestType() {
 		return workRequestType;
 	}
