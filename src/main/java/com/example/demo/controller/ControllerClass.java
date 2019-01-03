@@ -19,7 +19,7 @@ public class ControllerClass {
 	@Autowired
 	ValidationRepo vr;
 	
-	//Map<String,Object> hm=new HashMap<String,Object>();
+
 	@RequestMapping(value = "/validate", method = RequestMethod.POST)
 	public void addValues(@RequestBody HashMap<String,Object> hm) {
 
@@ -33,11 +33,6 @@ public class ControllerClass {
 		
 		List<WorkRequestTypeMetaData> list=vr.findByWorkRequestType((String) value);
 		System.out.println(list);
-//		System.out.println(hm.get(1));
-//		System.out.println(hm.get(2));
-//		hm.put("ECN","12345");
-//		hm.put("NAME","SRIKESH");
-//		hm.put("DOB","04-02-1997");
 		
 	}
 }
