@@ -76,13 +76,13 @@ public class Validation {
 
             }
 
-
+            System.out.println(hm2.size());
             //now we have unknown attr. what to do with it?
             if (!ignoreOtherAttr && hm2.size() > 0) {
                 System.out.println("throwing exception");
                 //throw new exception
             } else {
-                System.out.println("nothing will be done as of now with the addln attr.");
+                System.out.println("nothing will be done as of now with the addln attr if present.");
             }
             //
             return hm2;

@@ -35,7 +35,7 @@ public class PopulatePojos {
         boolean ignoreOtherAttr=workReqTypeobj.getIgnoreAditionalAttributes();
         //now we have wr id.
     			
-    	
+    	//using this ID get all the mandatory fields relating to this wr id.
         List<CommonFormatAttributeMetaData> cfam=new ArrayList<CommonFormatAttributeMetaData>();
         List<Validation_Master> validationMasterlist=validationMasterRepo.findAllByWorkRequestTypeId_wId(wid);//
 		for (Validation_Master validation_Master : validationMasterlist) {
