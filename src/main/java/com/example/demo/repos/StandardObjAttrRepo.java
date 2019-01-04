@@ -4,7 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.example.demo.model.Standard_Object_Attributes;
-@RepositoryRestResource
+//@RepositoryRestResource
+@RepositoryRestResource(collectionResourceRel = "standardobjattrrepo", path = "standardobjattrrepo")
 public interface StandardObjAttrRepo extends JpaRepository<Standard_Object_Attributes, Integer> {
 
 }

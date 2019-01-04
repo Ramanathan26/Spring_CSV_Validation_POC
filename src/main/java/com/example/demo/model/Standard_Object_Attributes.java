@@ -1,14 +1,19 @@
 package com.example.demo.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Standard_Object_Attributes {
 
 	@Id
-	private int C_Id;
-	private String Common_Format_Field_Name;
+//	@GeneratedValue(strategy = GenerationType.AUTO, generator = "my_seq_gen")
+//	@SequenceGenerator(name = "my_seq_gen", sequenceName = "id_seq", allocationSize = 1)
+	private int cId;
+	private String commonFormatFieldName;
 	
 	
 	
@@ -21,32 +26,58 @@ public class Standard_Object_Attributes {
 		
 	}
 
-	public Standard_Object_Attributes(int c_id, String common_Format_Field_Name) {
+
+
+
+
+
+
+	public int getcId() {
+		return cId;
+	}
+
+
+
+
+
+
+
+	public void setcId(int cId) {
+		this.cId = cId;
+	}
+
+
+
+
+
+
+
+	public String getCommonFormatFieldName() {
+		return commonFormatFieldName;
+	}
+
+
+
+
+
+
+
+	public void setCommonFormatFieldName(String commonFormatFieldName) {
+		this.commonFormatFieldName = commonFormatFieldName;
+	}
+
+
+
+
+
+
+
+	public Standard_Object_Attributes(int cId, String commonFormatFieldName) {
 		super();
-		C_Id = c_id;
-		Common_Format_Field_Name = common_Format_Field_Name;
+		this.cId = cId;
+		this.commonFormatFieldName = commonFormatFieldName;
 	}
 
-	public int getC_Id() {
-		return C_Id;
-	}
-
-	public void setC_Id(int c_id) {
-		C_Id = c_id;
-	}
-
-	public String getCommon_Format_Field_Name() {
-		return Common_Format_Field_Name;
-	}
-
-	public void setCommon_Format_Field_Name(String common_Format_Field_Name) {
-		Common_Format_Field_Name = common_Format_Field_Name;
-	}
-
-	@Override
-	public String toString() {
-		return "Standard_Object_Mapping_Master [Id=" + C_Id + ", Common_Format_Field_Name=" + Common_Format_Field_Name
-				+ "]";
-	}
+	
 	
 }

@@ -35,13 +35,18 @@ public class ControllerClass {
 	@Autowired
 	private ValidationMasterRepo validationMasterRepo;
 	
+	@Autowired
+	private PopulatePojos pojo;
+	@Autowired
+	private Validation validation;
+	
 	
 
 	@RequestMapping(value = "/validate", method = RequestMethod.POST)
 	public void addValues(@RequestBody HashMap<String,Object> hm) {
 		//extract wR type from hash map received.
 		String value = null;
-		System.out.println(hm.toString());
+		System.out.println("hashmap received: "+hm.toString());
 		if(hm.containsKey("WorkRequestType"))
 		{
 			value=(String)hm.get("WorkRequestType");
@@ -50,14 +55,16 @@ public class ControllerClass {
 		}
 		
 		//
-		PopulatePojos populatePojos=new PopulatePojos();
-		WorkRequestTypeMetaData wrtypemetadata=populatePojos.getAttributesForWorkRequestType(value);
+		
+		WorkRequestTypeMetaData wrtypemetadata=pojo.getAttributesForWorkRequestType(value);
+		System.out.println("pojos populated now.");
 		//
 		
 		
 		//
-		Validation validation=new Validation();
-		validation.validate(hm, wrtypemetadata);
+//		Validation validation=new Validation();
+		HashMap validatedHashMap=validation.validate(hm, wrtypemetadata);
+		System.out.println(validatedHashMap.toString());
 		//
 
 	}
