@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 @Service
 public class Validation {
     @Autowired
@@ -35,14 +36,33 @@ public class Validation {
         HashMap hm2 = (HashMap) hm.clone();
         //check if all the mandatory fields are present or not.
 
+
+        ////////---------------experiment
+        Set<String> keyset=hm2.keySet();
+        ////////--------
+        
+
+
         for (CommonFormatAttributeMetaData commonFormatAttributeMetaData : wrtypemetadata.getAttributes()) {
             if (commonFormatAttributeMetaData.isRequired()) {
-                flag = hm2.containsKey(commonFormatAttributeMetaData.getAttributeName());
+            	////////--------
+                for (String key : keyset) {
+                    flag=key.startsWith(commonFormatAttributeMetaData.getAttributeName());
+                    System.out.println(flag+" "+key);
+                    if(flag==true){
+                    	hm2.remove(key);//review
+                    	keyset.remove(key);
+                    	break;
+                    }
+                    
+                }
+                ////////---------------
+//                flag = hm2.containsKey(commonFormatAttributeMetaData.getAttributeName());//uncomment
                 if (flag == false) {
                     System.out.println("mandatory field not present. throw error here");
                     break;
                 }
-                hm2.remove(commonFormatAttributeMetaData.getAttributeName());
+//                hm2.remove(commonFormatAttributeMetaData.getAttributeName());//uncomment
             }
             else {
                 if (hm2.containsKey(commonFormatAttributeMetaData.getAttributeName())) {
@@ -68,11 +88,21 @@ public class Validation {
             String attrname;
             for (Standard_Object_Attributes standard_Object_Attributes : allAttrList) {
                 attrname = standard_Object_Attributes.getCommonFormatFieldName();
-                flag2 = hm2.containsKey(attrname);
-                if (flag2 == true) {
-                    System.out.println("field present.");
-                    hm2.remove(attrname);
+                ////////--------
+                for (String key : keyset) {
+                    flag2= key.startsWith(attrname);
+                    if (flag2 == true) {
+                        hm2.remove(key);//review
+                        keyset.remove(key);
+                        break;
+                    }
                 }
+                ////////---------------
+//                flag2 = hm2.containsKey(attrname);
+//                if (flag2 == true) {
+//                    System.out.println("known field present.");
+//                    hm2.remove(attrname);
+//                }
 
             }
 

@@ -63,7 +63,7 @@ public class ControllerClass {
 		
 		//
 //		Validation validation=new Validation();
-		HashMap validatedHashMap=validation.validate(hm, wrtypemetadata);
+		HashMap validatedHashMap=validation.validate(hm, wrtypemetadata);//as of now cloned hash map is being returned.
 		System.out.println(validatedHashMap.toString());
 		//
 
