@@ -115,10 +115,12 @@ public class Validation {
                 System.out.println("nothing will be done as of now with the addln attr if present.");
             }
             //
-            return hm2;
+            System.out.println(hm2.toString());//print the attributes which are unknown
+            return hm;//return validated hash map.
         }
         else {
-        	return hm2;
+            System.out.println(hm2.toString());//
+        	return hm;//return validated hashmap.
         }
     }
 }
