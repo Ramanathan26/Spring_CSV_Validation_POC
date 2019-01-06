@@ -64,7 +64,7 @@ public class ControllerClass {
 		//
 //		Validation validation=new Validation();
 		HashMap validatedHashMap=validation.validate(hm, wrtypemetadata);
-		System.out.println(validatedHashMap.toString());
+//		System.out.println(validatedHashMap.toString());
 		//
 
 	}

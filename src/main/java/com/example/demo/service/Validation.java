@@ -46,8 +46,14 @@ public class Validation {
         for (CommonFormatAttributeMetaData commonFormatAttributeMetaData : wrtypemetadata.getAttributes()) {
             if (commonFormatAttributeMetaData.isRequired()) {
             	////////--------
+                String attr;
                 for (String key : keyset) {
-                    flag=key.startsWith(commonFormatAttributeMetaData.getAttributeName());
+                    attr=commonFormatAttributeMetaData.getAttributeName();
+                    flag=key.startsWith(attr);
+                    //____________underscore validation
+                    if (flag==true)
+                        flag = underscoreAndSequenceValidate(attr, key);
+                    //_____________
                     System.out.println(flag+" "+key);
                     if(flag==true){
                     	hm2.remove(key);//review
@@ -91,6 +97,10 @@ public class Validation {
                 ////////--------
                 for (String key : keyset) {
                     flag2= key.startsWith(attrname);
+                    //____________underscore validation
+                    if (flag2==true)
+                        flag2 = underscoreAndSequenceValidate(attrname, key);
+                    //_____________
                     if (flag2 == true) {
                         hm2.remove(key);//review
                         keyset.remove(key);
@@ -122,5 +132,49 @@ public class Validation {
             System.out.println(hm2.toString());//
         	return hm;//return validated hashmap.
         }
+    }
+
+    public boolean underscoreAndSequenceValidate(String attrr,String key){
+        boolean flagg = true;
+            if (attrr.contains("_")) {
+                int indexx=key.lastIndexOf("_");
+                if (attrr.lastIndexOf("_")==indexx){
+                    try {//seq num validation
+                        int seqnum=Integer.parseInt(key.substring(indexx+1));
+                    } catch(NumberFormatException e) {
+                        System.out.println("sequence number in attribute: " + key + " is not proper");
+                        flagg=false;
+                    }
+                    return flagg;
+                }
+                else{
+                    flagg=false;
+                    return flagg;
+                }
+            }
+            else if (key.contains("_")){
+                flagg=false;
+                return flagg;
+            }
+            else{
+                //seq vald
+                int indexx2=attrr.length();
+                String subnum=key.substring(indexx2);
+                try {//seq num validation
+                	//if condition below to be modified if seq number is not mandatory for workrequesttype//issuehere
+                    
+                	if (subnum!=null) {
+                        int seqnum = Integer.parseInt(subnum);
+                        flagg = true;
+                        return flagg;
+                    }
+                } catch(NumberFormatException e) {
+                    System.out.println("attribute: " + key + " with seq num at index "+subnum+" is not proper");
+                    flagg=false;
+                    return flagg;
+                }
+
+            }
+            return flagg;
     }
 }
