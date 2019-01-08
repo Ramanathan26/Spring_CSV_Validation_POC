@@ -39,12 +39,25 @@ public class CommonFormatAttributeValidationService {
 		// first we shall clone the map.
 		HashMap<String, Object> hm2 =  (HashMap<String, Object>) hm.clone();
 		// check if all the mandatory fields are present or not.
-
+		////////---------------
+		Set<String> keyset=hm2.keySet();
+		////////--------
 
 		for (CommonFormatAttributeMetaData commonFormatAttributeMetaData : wrtypemetadata.getAttributes()) {
 			if (commonFormatAttributeMetaData.isRequired()) {
-				//////// --------
-				flag = hm2.containsKey(commonFormatAttributeMetaData.getAttributeName());
+				////////------------
+				String attr;
+				for (String key : keyset) {
+					attr=commonFormatAttributeMetaData.getAttributeName();
+					flag=key.startsWith(attr);
+					if(flag==true){
+						hm2.remove(key);
+						keyset.remove(key);
+						break;
+					}
+				}
+				////////---------------
+//				flag = hm2.containsKey(commonFormatAttributeMetaData.getAttributeName());
 				if (flag == false) {
 					throw new ValidationException("mandatory field not present.", commonFormatAttributeMetaData.getAttributeName());
 				}
@@ -70,14 +83,25 @@ public class CommonFormatAttributeValidationService {
 			String attrname;
 			for (Standard_Object_Attributes standard_Object_Attributes : allAttrList) {
 				attrname = standard_Object_Attributes.getCommonFormatFieldName();
-				hm2.remove(attrname);
+				////////--------------
+				String attr;
+				for (String key : keyset) {
+					flag=key.startsWith(attrname);
+					if(flag==true){
+						hm2.remove(key);
+						keyset.remove(key);
+						break;
+					}
+				}
+				////////---------------
+//				hm2.remove(attrname);
 			}
 
 			
 			if (hm2.size() > 0) {
-				throw new ValidationException("Unknown attributes present.", hm2.keySet().iterator().next());
-			} //
-			return hm;// return validated hash map.
+				throw new ValidationException("Unknown attributes present.", hm2.keySet().toString());//iterator().next());
+			} 
+			return hm;
 		} else {
 			System.out.println(hm2.toString());//
 			return hm;// return validated hashmap.
@@ -107,13 +131,9 @@ public class CommonFormatAttributeValidationService {
 
 
 			//get values to populate WorkRequestTypeMetaData
-//	      Object[] o=new Object[cfam.size()];//conversion form list to array
 	        CommonFormatAttributeMetaData[] wrtm = cfam.toArray(new CommonFormatAttributeMetaData[cfam.size()]);
-//	        CommonFormatAttributeMetaData[] wrtm=(CommonFormatAttributeMetaData[]) cfam.toArray();
-
 	        WorkRequestTypeMetaData wrtypemetadata = new WorkRequestTypeMetaData(workRequestType,wid,workReqTypeobj.getIgnoreAditionalAttributes(),wrtm);
 	        //using "wrtypemetadata" object created.. validate for mandatory fields.
-	        //
 	        return wrtypemetadata;
 		}
 }

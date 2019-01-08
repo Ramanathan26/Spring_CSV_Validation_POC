@@ -40,6 +40,7 @@ public class ControllerClass {
 		}
 
 		//TODO: Insert into DB
+		System.out.println(referenceId+" is the reference ID. Validation successful.");
 		return new IssueIntakeResponse(referenceId);
 	}
 }
