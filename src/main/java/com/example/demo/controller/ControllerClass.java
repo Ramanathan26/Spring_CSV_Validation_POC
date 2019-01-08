@@ -4,7 +4,12 @@ import java.util.*;
 
 import com.example.demo.exceptions.ValidationException;
 import com.example.demo.service.CommonFormatAttributeValidationService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +37,27 @@ public class ControllerClass {
 
 		try {
 			HashMap validatedHashMap=validationService.validate(hm, value);
+		////json
+					String mapAsJson = null;
+					try {
+						mapAsJson = new ObjectMapper().writeValueAsString(validatedHashMap);
+					} catch (JsonProcessingException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			        System.out.println(mapAsJson+"!!!!!!!!!!!!!!!!!!!");
+			        //vice versa
+			        JSONParser parser = new JSONParser();
+			        try {
+						JSONObject json = (JSONObject) parser.parse(mapAsJson);
+						HashMap<String,Object> result =json;
+						        
+						System.out.println(result+"!!!!!!!!!!!!!!!!!!!");
+					} catch (ParseException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					////endjson
 
 		} catch (ValidationException e) {
 			Errors[] err = new Errors[1];

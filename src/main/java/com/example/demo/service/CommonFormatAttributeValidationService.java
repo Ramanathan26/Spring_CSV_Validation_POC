@@ -9,6 +9,8 @@ import com.example.demo.pojos.WorkRequestTypeMetaData;
 import com.example.demo.repos.StandardObjAttrRepo;
 import com.example.demo.repos.ValidationMasterRepo;
 import com.example.demo.repos.WorkReqTypeMasterRepo;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +19,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 @Service
 public class CommonFormatAttributeValidationService {
@@ -26,8 +31,8 @@ public class CommonFormatAttributeValidationService {
 	private StandardObjAttrRepo standardObjAttrRepo;
 	@Autowired
 	private ValidationMasterRepo validationMasterRepo;
-
 	private boolean flag;
+	
 	public HashMap<String, Object> validate(HashMap<String, Object> hm, String workrequestType)
 			throws ValidationException {
 		

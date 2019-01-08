@@ -98,3 +98,333 @@
 2019-01-08 15:26:45 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2019-01-08 15:26:45 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2019-01-08 15:26:45 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-01-08 15:44:04 [main] INFO  c.e.d.SpringCsvValidationApplication - Starting SpringCsvValidationApplication on Srikeshs-MBP-6a92 with PID 90018 (/Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC/target/classes started by srikeshnagoji in /Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC)
+2019-01-08 15:44:04 [main] INFO  c.e.d.SpringCsvValidationApplication - No active profile set, falling back to default profiles: default
+2019-01-08 15:44:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-08 15:44:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 169ms. Found 3 repository interfaces.
+2019-01-08 15:44:08 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c597f059] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:44:08 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$45183d8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:44:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-01-08 15:44:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-01-08 15:44:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-08 15:44:09 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/srikeshnagoji/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-08 15:44:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-01-08 15:44:09 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4828 ms
+2019-01-08 15:44:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-01-08 15:44:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-01-08 15:44:10 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-08 15:44:10 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-08 15:44:10 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-01-08 15:44:11 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-08 15:44:11 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-01-08 15:44:14 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 15:44:16 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-08 15:44:17 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-08 15:44:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-08 15:44:17 [main] INFO  c.e.d.SpringCsvValidationApplication - Started SpringCsvValidationApplication in 14.214 seconds (JVM running for 17.13)
+2019-01-08 15:44:22 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-08 15:44:22 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-01-08 15:44:22 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 40 ms
+2019-01-08 15:44:23 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-01-08 15:44:23 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select work_reque0_.w_id as w_id1_4_, work_reque0_.ignore_aditional_attributes as ignore_a2_4_, work_reque0_.work_request_type as work_req3_4_ from work_request_type_master work_reque0_ where work_reque0_.work_request_type=?
+2019-01-08 15:44:23 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [TinDuplication]
+2019-01-08 15:44:23 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select validation0_.id as id1_3_, validation0_.cffield as cffield3_3_, validation0_.is_required as is_requi2_3_, validation0_.work_request_type_id as work_req4_3_ from validation_master validation0_ left outer join work_request_type_master work_reque1_ on validation0_.work_request_type_id=work_reque1_.w_id where work_reque1_.w_id=?
+2019-01-08 15:44:23 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [2]
+2019-01-08 15:44:23 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:23 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [8]
+2019-01-08 15:44:23 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:23 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [11]
+2019-01-08 15:44:23 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:23 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [15]
+2019-01-08 15:44:23 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:23 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [17]
+2019-01-08 15:44:23 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:23 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2019-01-08 15:44:23 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_, standard_o0_.common_format_field_name as common_f2_2_ from standard_object_attributes standard_o0_
+2019-01-08 15:44:28 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select work_reque0_.w_id as w_id1_4_, work_reque0_.ignore_aditional_attributes as ignore_a2_4_, work_reque0_.work_request_type as work_req3_4_ from work_request_type_master work_reque0_ where work_reque0_.work_request_type=?
+2019-01-08 15:44:28 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [TinDuplication]
+2019-01-08 15:44:28 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select validation0_.id as id1_3_, validation0_.cffield as cffield3_3_, validation0_.is_required as is_requi2_3_, validation0_.work_request_type_id as work_req4_3_ from validation_master validation0_ left outer join work_request_type_master work_reque1_ on validation0_.work_request_type_id=work_reque1_.w_id where work_reque1_.w_id=?
+2019-01-08 15:44:28 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [2]
+2019-01-08 15:44:28 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:28 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [8]
+2019-01-08 15:44:28 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:28 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [11]
+2019-01-08 15:44:28 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:28 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [15]
+2019-01-08 15:44:28 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:28 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [17]
+2019-01-08 15:44:28 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:28 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2019-01-08 15:44:28 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_, standard_o0_.common_format_field_name as common_f2_2_ from standard_object_attributes standard_o0_
+2019-01-08 15:44:39 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select work_reque0_.w_id as w_id1_4_, work_reque0_.ignore_aditional_attributes as ignore_a2_4_, work_reque0_.work_request_type as work_req3_4_ from work_request_type_master work_reque0_ where work_reque0_.work_request_type=?
+2019-01-08 15:44:39 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [TinDuplication]
+2019-01-08 15:44:39 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select validation0_.id as id1_3_, validation0_.cffield as cffield3_3_, validation0_.is_required as is_requi2_3_, validation0_.work_request_type_id as work_req4_3_ from validation_master validation0_ left outer join work_request_type_master work_reque1_ on validation0_.work_request_type_id=work_reque1_.w_id where work_reque1_.w_id=?
+2019-01-08 15:44:39 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [2]
+2019-01-08 15:44:39 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:39 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [8]
+2019-01-08 15:44:39 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:39 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [11]
+2019-01-08 15:44:39 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:39 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [15]
+2019-01-08 15:44:39 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:39 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [17]
+2019-01-08 15:44:39 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:44:39 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2019-01-08 15:44:39 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_, standard_o0_.common_format_field_name as common_f2_2_ from standard_object_attributes standard_o0_
+2019-01-08 15:47:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-01-08 15:47:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-08 15:47:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 15:47:04 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-01-08 15:47:04 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-01-08 15:47:10 [main] INFO  c.e.d.SpringCsvValidationApplication - Starting SpringCsvValidationApplication on Srikeshs-MBP-6a92 with PID 90019 (/Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC/target/classes started by srikeshnagoji in /Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC)
+2019-01-08 15:47:10 [main] INFO  c.e.d.SpringCsvValidationApplication - No active profile set, falling back to default profiles: default
+2019-01-08 15:47:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-08 15:47:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 155ms. Found 3 repository interfaces.
+2019-01-08 15:47:13 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$be0d7ecd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:47:14 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$3d8dcbff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:47:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-01-08 15:47:14 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-01-08 15:47:14 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-08 15:47:14 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/srikeshnagoji/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-08 15:47:14 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-01-08 15:47:14 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4551 ms
+2019-01-08 15:47:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-01-08 15:47:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-01-08 15:47:16 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-08 15:47:16 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-08 15:47:16 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-01-08 15:47:17 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-08 15:47:17 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-01-08 15:47:19 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 15:47:21 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-08 15:47:21 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-08 15:47:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-08 15:47:22 [main] INFO  c.e.d.SpringCsvValidationApplication - Started SpringCsvValidationApplication in 12.886 seconds (JVM running for 15.55)
+2019-01-08 15:47:28 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-08 15:47:28 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-01-08 15:47:28 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 27 ms
+2019-01-08 15:47:28 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-01-08 15:47:28 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select work_reque0_.w_id as w_id1_4_, work_reque0_.ignore_aditional_attributes as ignore_a2_4_, work_reque0_.work_request_type as work_req3_4_ from work_request_type_master work_reque0_ where work_reque0_.work_request_type=?
+2019-01-08 15:47:28 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [TinDuplication]
+2019-01-08 15:47:28 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select validation0_.id as id1_3_, validation0_.cffield as cffield3_3_, validation0_.is_required as is_requi2_3_, validation0_.work_request_type_id as work_req4_3_ from validation_master validation0_ left outer join work_request_type_master work_reque1_ on validation0_.work_request_type_id=work_reque1_.w_id where work_reque1_.w_id=?
+2019-01-08 15:47:28 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [2]
+2019-01-08 15:47:28 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:47:28 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [8]
+2019-01-08 15:47:28 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:47:28 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [11]
+2019-01-08 15:47:28 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:47:28 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [15]
+2019-01-08 15:47:28 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:47:28 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [17]
+2019-01-08 15:47:28 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 15:47:28 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2019-01-08 15:47:28 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_, standard_o0_.common_format_field_name as common_f2_2_ from standard_object_attributes standard_o0_
+2019-01-08 15:48:48 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-01-08 15:48:48 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-08 15:48:48 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 15:48:48 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-01-08 15:48:48 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-01-08 17:23:17 [main] INFO  c.e.d.SpringCsvValidationApplication - Starting SpringCsvValidationApplication on Srikeshs-MBP-6a92 with PID 90249 (/Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC/target/classes started by srikeshnagoji in /Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC)
+2019-01-08 17:23:17 [main] INFO  c.e.d.SpringCsvValidationApplication - No active profile set, falling back to default profiles: default
+2019-01-08 17:23:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-08 17:23:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144ms. Found 3 repository interfaces.
+2019-01-08 17:23:21 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4f01784d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 17:23:21 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$ce81c57f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 17:23:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-01-08 17:23:22 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-01-08 17:23:22 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-08 17:23:22 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/srikeshnagoji/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-08 17:23:22 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-01-08 17:23:22 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5096 ms
+2019-01-08 17:23:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-01-08 17:23:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-01-08 17:23:24 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-08 17:23:24 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-08 17:23:24 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-01-08 17:23:24 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-08 17:23:25 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-01-08 17:23:28 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 17:23:31 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-08 17:23:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-08 17:23:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-08 17:23:32 [main] INFO  c.e.d.SpringCsvValidationApplication - Started SpringCsvValidationApplication in 16.137 seconds (JVM running for 17.93)
+2019-01-08 17:23:36 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-08 17:23:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-01-08 17:23:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 38 ms
+2019-01-08 17:23:37 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-01-08 17:23:38 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select work_reque0_.w_id as w_id1_4_, work_reque0_.ignore_aditional_attributes as ignore_a2_4_, work_reque0_.work_request_type as work_req3_4_ from work_request_type_master work_reque0_ where work_reque0_.work_request_type=?
+2019-01-08 17:23:38 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [TinDuplication]
+2019-01-08 17:23:38 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select validation0_.id as id1_3_, validation0_.cffield as cffield3_3_, validation0_.is_required as is_requi2_3_, validation0_.work_request_type_id as work_req4_3_ from validation_master validation0_ left outer join work_request_type_master work_reque1_ on validation0_.work_request_type_id=work_reque1_.w_id where work_reque1_.w_id=?
+2019-01-08 17:23:38 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [2]
+2019-01-08 17:23:38 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:23:38 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [8]
+2019-01-08 17:23:38 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:23:38 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [11]
+2019-01-08 17:23:38 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:23:38 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [15]
+2019-01-08 17:23:38 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:23:38 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [17]
+2019-01-08 17:23:38 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:23:38 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2019-01-08 17:23:38 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_, standard_o0_.common_format_field_name as common_f2_2_ from standard_object_attributes standard_o0_
+2019-01-08 17:25:30 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-01-08 17:25:30 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-08 17:25:30 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 17:25:30 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-01-08 17:25:30 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-01-08 17:26:47 [main] INFO  c.e.d.SpringCsvValidationApplication - Starting SpringCsvValidationApplication on Srikeshs-MBP-6a92 with PID 90342 (/Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC/target/classes started by srikeshnagoji in /Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC)
+2019-01-08 17:26:47 [main] INFO  c.e.d.SpringCsvValidationApplication - No active profile set, falling back to default profiles: default
+2019-01-08 17:26:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-08 17:26:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144ms. Found 3 repository interfaces.
+2019-01-08 17:26:51 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5b8a8fe5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 17:26:51 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$db0add17] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 17:26:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-01-08 17:26:52 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-01-08 17:26:52 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-08 17:26:52 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/srikeshnagoji/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-08 17:26:52 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-01-08 17:26:52 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4729 ms
+2019-01-08 17:26:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-01-08 17:26:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-01-08 17:26:54 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-08 17:26:54 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-08 17:26:54 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-01-08 17:26:55 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-08 17:26:55 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-01-08 17:26:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 17:27:00 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-08 17:27:00 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-08 17:27:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-08 17:27:01 [main] INFO  c.e.d.SpringCsvValidationApplication - Started SpringCsvValidationApplication in 14.593 seconds (JVM running for 15.797)
+2019-01-08 17:27:08 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-08 17:27:08 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-01-08 17:27:08 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 33 ms
+2019-01-08 17:27:09 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-01-08 17:27:09 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select work_reque0_.w_id as w_id1_4_, work_reque0_.ignore_aditional_attributes as ignore_a2_4_, work_reque0_.work_request_type as work_req3_4_ from work_request_type_master work_reque0_ where work_reque0_.work_request_type=?
+2019-01-08 17:27:09 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [TinDuplication]
+2019-01-08 17:27:09 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select validation0_.id as id1_3_, validation0_.cffield as cffield3_3_, validation0_.is_required as is_requi2_3_, validation0_.work_request_type_id as work_req4_3_ from validation_master validation0_ left outer join work_request_type_master work_reque1_ on validation0_.work_request_type_id=work_reque1_.w_id where work_reque1_.w_id=?
+2019-01-08 17:27:09 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [2]
+2019-01-08 17:27:09 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:27:09 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [8]
+2019-01-08 17:27:09 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:27:09 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [11]
+2019-01-08 17:27:09 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:27:09 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [15]
+2019-01-08 17:27:09 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:27:09 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [17]
+2019-01-08 17:27:09 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:27:09 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2019-01-08 17:27:09 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_, standard_o0_.common_format_field_name as common_f2_2_ from standard_object_attributes standard_o0_
+2019-01-08 17:27:59 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-01-08 17:28:00 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-08 17:28:00 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 17:28:00 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-01-08 17:28:00 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-01-08 17:28:04 [main] INFO  c.e.d.SpringCsvValidationApplication - Starting SpringCsvValidationApplication on Srikeshs-MBP-6a92 with PID 90345 (/Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC/target/classes started by srikeshnagoji in /Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC)
+2019-01-08 17:28:04 [main] INFO  c.e.d.SpringCsvValidationApplication - No active profile set, falling back to default profiles: default
+2019-01-08 17:28:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-08 17:28:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 159ms. Found 3 repository interfaces.
+2019-01-08 17:28:07 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e5dfee13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 17:28:07 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$65603b45] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 17:28:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-01-08 17:28:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-01-08 17:28:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-08 17:28:09 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/srikeshnagoji/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-08 17:28:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-01-08 17:28:09 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4618 ms
+2019-01-08 17:28:09 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-01-08 17:28:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-01-08 17:28:10 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-08 17:28:10 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-08 17:28:10 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-01-08 17:28:11 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-08 17:28:11 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-01-08 17:28:13 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 17:28:16 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-08 17:28:16 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-08 17:28:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-08 17:28:16 [main] INFO  c.e.d.SpringCsvValidationApplication - Started SpringCsvValidationApplication in 13.665 seconds (JVM running for 15.373)
+2019-01-08 17:28:21 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-08 17:28:21 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-01-08 17:28:21 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 31 ms
+2019-01-08 17:28:21 [http-nio-8080-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-01-08 17:28:22 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select work_reque0_.w_id as w_id1_4_, work_reque0_.ignore_aditional_attributes as ignore_a2_4_, work_reque0_.work_request_type as work_req3_4_ from work_request_type_master work_reque0_ where work_reque0_.work_request_type=?
+2019-01-08 17:28:22 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [TinDuplication]
+2019-01-08 17:28:22 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select validation0_.id as id1_3_, validation0_.cffield as cffield3_3_, validation0_.is_required as is_requi2_3_, validation0_.work_request_type_id as work_req4_3_ from validation_master validation0_ left outer join work_request_type_master work_reque1_ on validation0_.work_request_type_id=work_reque1_.w_id where work_reque1_.w_id=?
+2019-01-08 17:28:22 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [2]
+2019-01-08 17:28:22 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:28:22 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [8]
+2019-01-08 17:28:22 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:28:22 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [11]
+2019-01-08 17:28:22 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:28:22 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [15]
+2019-01-08 17:28:22 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:28:22 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [17]
+2019-01-08 17:28:22 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:28:22 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2019-01-08 17:28:22 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_, standard_o0_.common_format_field_name as common_f2_2_ from standard_object_attributes standard_o0_
+2019-01-08 17:29:36 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-01-08 17:29:36 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-08 17:29:36 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 17:29:37 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-01-08 17:29:37 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-01-08 17:33:38 [main] INFO  c.e.d.SpringCsvValidationApplication - Starting SpringCsvValidationApplication on Srikeshs-MBP-6a92 with PID 90359 (/Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC/target/classes started by srikeshnagoji in /Users/srikeshnagoji/Documents/javaworkspace/Spring_CSV_Validation_POC)
+2019-01-08 17:33:38 [main] INFO  c.e.d.SpringCsvValidationApplication - No active profile set, falling back to default profiles: default
+2019-01-08 17:33:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-08 17:33:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 157ms. Found 3 repository interfaces.
+2019-01-08 17:33:42 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$70f885b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 17:33:42 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$f078d2e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 17:33:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-01-08 17:33:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-01-08 17:33:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-08 17:33:43 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/srikeshnagoji/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-08 17:33:43 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-01-08 17:33:43 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4685 ms
+2019-01-08 17:33:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-01-08 17:33:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-01-08 17:33:45 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-08 17:33:45 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-08 17:33:45 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-01-08 17:33:46 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-08 17:33:46 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-01-08 17:33:48 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 17:33:50 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-08 17:33:50 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-08 17:33:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-08 17:33:51 [main] INFO  c.e.d.SpringCsvValidationApplication - Started SpringCsvValidationApplication in 13.395 seconds (JVM running for 14.741)
+2019-01-08 17:34:09 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-08 17:34:09 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-01-08 17:34:09 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 36 ms
+2019-01-08 17:34:10 [http-nio-8080-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-01-08 17:34:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select work_reque0_.w_id as w_id1_4_, work_reque0_.ignore_aditional_attributes as ignore_a2_4_, work_reque0_.work_request_type as work_req3_4_ from work_request_type_master work_reque0_ where work_reque0_.work_request_type=?
+2019-01-08 17:34:10 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [TinDuplication]
+2019-01-08 17:34:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select validation0_.id as id1_3_, validation0_.cffield as cffield3_3_, validation0_.is_required as is_requi2_3_, validation0_.work_request_type_id as work_req4_3_ from validation_master validation0_ left outer join work_request_type_master work_reque1_ on validation0_.work_request_type_id=work_reque1_.w_id where work_reque1_.w_id=?
+2019-01-08 17:34:10 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [2]
+2019-01-08 17:34:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:34:10 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [8]
+2019-01-08 17:34:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:34:10 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [11]
+2019-01-08 17:34:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:34:10 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [15]
+2019-01-08 17:34:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:34:10 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [17]
+2019-01-08 17:34:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_0_, standard_o0_.common_format_field_name as common_f2_2_0_ from standard_object_attributes standard_o0_ where standard_o0_.c_id=?
+2019-01-08 17:34:10 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2019-01-08 17:34:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select standard_o0_.c_id as c_id1_2_, standard_o0_.common_format_field_name as common_f2_2_ from standard_object_attributes standard_o0_
+2019-01-08 17:35:12 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-01-08 17:35:12 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-08 17:35:12 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-08 17:35:12 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-01-08 17:35:12 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
