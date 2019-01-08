@@ -46,7 +46,9 @@ public class ControllerClass {
 						e.printStackTrace();
 					}
 			        System.out.println(mapAsJson+"!!!!!!!!!!!!!!!!!!!");
-			        //vice versa
+			        //TODO:persist to DB here!!
+			        
+			        //below code to convert from json to map.
 			        JSONParser parser = new JSONParser();
 			        try {
 						JSONObject json = (JSONObject) parser.parse(mapAsJson);
