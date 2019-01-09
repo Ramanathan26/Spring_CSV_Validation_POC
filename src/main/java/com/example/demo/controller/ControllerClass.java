@@ -42,7 +42,7 @@ public class ControllerClass {
 
 		try {
 			HashMap validatedHashMap=validationService.validate(hm, value);
-					////json
+					//// mapped json persist
 					String mapAsJson = null;
 					try {
 						mapAsJson = new ObjectMapper().writeValueAsString(validatedHashMap);
@@ -51,9 +51,9 @@ public class ControllerClass {
 						e.printStackTrace();
 					}
 			        System.out.println(mapAsJson+"!!!!!!!!!!!!!!!!!!!");
-			        //TODO:persist to DB here!!
+			        //TODO:DONE!! persist to DB here!! SENDER who will persist in DB
 			        issueIntakeRepo.save(new Issue_Intake(referenceId,mapAsJson));
-			        //below code to convert from json to map.
+			        //below code to convert from json to map.RECEIVER SIDE
 			        JSONParser parser = new JSONParser();
 			        try {
 
@@ -63,6 +63,7 @@ public class ControllerClass {
 						HashMap<String,Object> result =json;
 						        
 						System.out.println(result+"!!!!!!!!!!!!!!!!!!!");
+						System.out.println(result.keySet()+"poof that it is working");
 					} catch (ParseException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
