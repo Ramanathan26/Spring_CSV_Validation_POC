@@ -58,13 +58,6 @@ public class ControllerClass {
 		saveIt(hm,iir.getReferenceId());
 		return iir;
 	}
-
-
-
-
-
-
-
 	@RequestMapping(value = "/process", method = RequestMethod.POST)
 	public IssueIntakeResponse processIssueIntake(@RequestBody HashMap<String,Object> hm) {
 		//TODO: Generate better unique id
@@ -93,6 +86,8 @@ public class ControllerClass {
 
 
 
+
+
 	public void saveIt(HashMap validatedHashMap,String referenceId){
 		//// mapped json persist
 		String mapAsJson=toJson(validatedHashMap);
@@ -101,14 +96,9 @@ public class ControllerClass {
 		//below code to convert from json to map.RECEIVER SIDE
 		/*JSONParser parser = new JSONParser();
 		try {
-
 			System.out.println(issueIntakeRepo.findAllById(referenceId));
-
 			JSONObject json = (JSONObject) parser.parse(issueIntakeRepo.findAllById(referenceId).getMappedJson());
 			HashMap<String,Object> result =json;
-
-			System.out.println(result+"!!!!!!!!!!!!!!!!!!!");
-			System.out.println(result.keySet()+"poof that it is working");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}*/
@@ -121,7 +111,6 @@ public class ControllerClass {
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 		}
-		System.out.println(mapAsJson+"!!!!!!!!!!!!!!!!!!!");
 		return mapAsJson;
 	}
 }

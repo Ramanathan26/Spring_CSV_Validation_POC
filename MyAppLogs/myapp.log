@@ -2317,3 +2317,7 @@ public java.util.List<com.example.demo.controller.IssueIntakeResponse> com.examp
 2019-01-09 17:06:55 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - insert into issue_intake (mapped_json, id) values (?, ?)
 2019-01-09 17:06:55 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [{"TIN_":5,"WorkRequestType":"TinDuplication","DOB_":"878","Status_":"yoman","Name":"akar","ECN_":78}]
 2019-01-09 17:06:55 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [1547033815852]
+2019-01-09 17:09:25 [Thread-3] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-09 17:09:25 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-09 17:09:25 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-01-09 17:09:25 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
