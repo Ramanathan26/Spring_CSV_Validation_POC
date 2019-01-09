@@ -1,26 +1,33 @@
 package com.example.demo.model;
 
-public class Issue_Intake {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-	private int Id;
-	private String MappedJson;
+@Entity
+public class Issue_Intake {
+	public Issue_Intake() {
+	}
+
+	@Id
+	private String id;
+	private String mappedJson;
 	
-	public Issue_Intake(int id, String mappedJson) {
-		super();
-		Id = id;
-		MappedJson = mappedJson;
+	public Issue_Intake(String id, String mappedJson) {
+//		super();
+		this.id = id;
+		this.mappedJson = mappedJson;
 	}
-	public int getId() {
-		return Id;
+	public String getId() {
+		return id;
 	}
-	public void setId(int id) {
-		Id = id;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getMappedJson() {
-		return MappedJson;
+		return this.mappedJson;
 	}
 	public void setMappedJson(String mappedJson) {
-		MappedJson = mappedJson;
+		this.mappedJson = mappedJson;
 	}
 	
 	

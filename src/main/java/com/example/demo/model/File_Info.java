@@ -7,7 +7,7 @@ import javax.persistence.Id;
 public class File_Info {
 
 	@Id
-	private int F_Id;
+	private String F_Id;
 	private String File_Name;
 	
 	
@@ -17,15 +17,15 @@ public class File_Info {
 		
 	}
 	
-	public File_Info(int f_id, String file_Name) {
+	public File_Info(String f_id, String file_Name) {
 		super();
 		F_Id = f_id;
 		File_Name = file_Name;
 	}
-	public int getF_Id() {
+	public String getF_Id() {
 		return F_Id;
 	}
-	public void setF_Id(int f_id) {
+	public void setF_Id(String f_id) {
 		F_Id = f_id;
 	}
 	public String getFile_Name() {

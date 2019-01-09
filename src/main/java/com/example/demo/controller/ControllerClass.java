@@ -3,6 +3,8 @@ package com.example.demo.controller;
 import java.util.*;
 
 import com.example.demo.exceptions.ValidationException;
+import com.example.demo.model.Issue_Intake;
+import com.example.demo.repos.IssueIntakeRepo;
 import com.example.demo.service.CommonFormatAttributeValidationService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -22,6 +24,9 @@ public class ControllerClass {
 	@Autowired
 	private CommonFormatAttributeValidationService validationService;
 
+	@Autowired
+	private IssueIntakeRepo issueIntakeRepo;
+
 	@RequestMapping(value = "/process", method = RequestMethod.POST)
 	public IssueIntakeResponse processIssueIntake(@RequestBody HashMap<String,Object> hm) {
 
@@ -37,7 +42,7 @@ public class ControllerClass {
 
 		try {
 			HashMap validatedHashMap=validationService.validate(hm, value);
-		////json
+					////json
 					String mapAsJson = null;
 					try {
 						mapAsJson = new ObjectMapper().writeValueAsString(validatedHashMap);
@@ -47,11 +52,14 @@ public class ControllerClass {
 					}
 			        System.out.println(mapAsJson+"!!!!!!!!!!!!!!!!!!!");
 			        //TODO:persist to DB here!!
-			        
+			        issueIntakeRepo.save(new Issue_Intake(referenceId,mapAsJson));
 			        //below code to convert from json to map.
 			        JSONParser parser = new JSONParser();
 			        try {
-						JSONObject json = (JSONObject) parser.parse(mapAsJson);
+
+			        	System.out.println(issueIntakeRepo.findAllById(referenceId));
+
+						JSONObject json = (JSONObject) parser.parse(issueIntakeRepo.findAllById(referenceId).getMappedJson());
 						HashMap<String,Object> result =json;
 						        
 						System.out.println(result+"!!!!!!!!!!!!!!!!!!!");
