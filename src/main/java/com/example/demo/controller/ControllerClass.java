@@ -14,11 +14,14 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
+@Service
+@Component
 @RestController
 public class ControllerClass {
 	
@@ -67,6 +70,7 @@ public class ControllerClass {
 		if(hm.containsKey("WorkRequestType"))
 		{
 			value=(String)hm.get("WorkRequestType");
+//			System.out.println("value: "+value);
 		}
 
 

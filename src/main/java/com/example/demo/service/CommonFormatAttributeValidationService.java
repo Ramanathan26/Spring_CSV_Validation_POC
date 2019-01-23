@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.exceptions.ValidationException;
-import com.example.demo.model.Standard_Object_Attributes;
+import com.example.demo.model.StandardObjectMappingMaster;
 import com.example.demo.model.Validation_Master;
 import com.example.demo.model.Work_Request_Type_Master;
 import com.example.demo.pojos.CommonFormatAttributeMetaData;
@@ -9,8 +9,6 @@ import com.example.demo.pojos.WorkRequestTypeMetaData;
 import com.example.demo.repos.StandardObjAttrRepo;
 import com.example.demo.repos.ValidationMasterRepo;
 import com.example.demo.repos.WorkReqTypeMasterRepo;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,9 +17,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 @Service
 public class CommonFormatAttributeValidationService {
@@ -83,11 +78,11 @@ public class CommonFormatAttributeValidationService {
 
 		if (!ignoreOtherAttr) {
 			// check for known attr.
-			List<Standard_Object_Attributes> allAttrList = standardObjAttrRepo.findAll();
+			List<StandardObjectMappingMaster> allAttrList = standardObjAttrRepo.findAll();
 			// now we have all std attr list.
 			String attrname;
-			for (Standard_Object_Attributes standard_Object_Attributes : allAttrList) {
-				attrname = standard_Object_Attributes.getCommonFormatFieldName();
+			for (StandardObjectMappingMaster standard_Object_MappingMaster : allAttrList) {
+				attrname = standard_Object_MappingMaster.getCommonFormatFieldName();
 				////////--------------
 				String attr;
 				for (String key : keyset) {
@@ -108,7 +103,7 @@ public class CommonFormatAttributeValidationService {
 			} 
 			return hm;
 		} else {
-			System.out.println(hm2.toString());//
+//			System.out.println(hm2.toString());//
 			return hm;// return validated hashmap.
 		}
 	}
@@ -117,22 +112,22 @@ public class CommonFormatAttributeValidationService {
 	    //
 	        // get all the common format attr for that work req type
 	        //first find out wr ID using the known wr type.
-	    	System.out.println(workRequestType);
+//	    	System.out.println(workRequestType);
 	        Work_Request_Type_Master workReqTypeobj=workReqTypeMasterRepo.findByWorkRequestType(workRequestType);
 	        int wid=workReqTypeobj.getwId();
-	        System.out.println("workreq id: "+wid);
+//	        System.out.println("workreq id: "+wid);
 	        //using this ID get all the mandatory fields relating to this wr id.
 	        List<CommonFormatAttributeMetaData> cfam=new ArrayList<CommonFormatAttributeMetaData>();
 	        List<Validation_Master> validationMasterlist=validationMasterRepo.findAllByWorkRequestTypeId_wId(wid);//
 			for (Validation_Master validation_Master : validationMasterlist) {
-	            Standard_Object_Attributes soa=validation_Master.getcFField();
+	            StandardObjectMappingMaster soa=validation_Master.getcFField();
 	            boolean isreq=validation_Master.isRequired();
 
 	            //construct CommonFormatAttributeMetaData object and add it to list cfam.
 	            cfam.add(new CommonFormatAttributeMetaData(soa.getCommonFormatFieldName(),isreq,null));
 
 			}//now we have a list containing objects of CommonFormatAttributeMetaData type.
-	        System.out.println("list conatining the common format attr relating to that particular wr type"+cfam);
+//	        System.out.println("list conatining the common format attr relating to that particular wr type"+cfam);
 
 
 			//get values to populate WorkRequestTypeMetaData

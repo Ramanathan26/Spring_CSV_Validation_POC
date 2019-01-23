@@ -13,7 +13,7 @@ public class Validation_Master {
 	private int Id;
 	@OneToOne
 	@JoinColumn(name="cFField")
-	private Standard_Object_Attributes cFField;
+	private StandardObjectMappingMaster cFField;
 	@ManyToOne
 	@JoinColumn(name="workRequestTypeId")
     private Work_Request_Type_Master workRequestTypeId;
@@ -52,7 +52,7 @@ public class Validation_Master {
 
 
 
-	public Standard_Object_Attributes getcFField() {
+	public StandardObjectMappingMaster getcFField() {
 		return cFField;
 	}
 
@@ -61,7 +61,7 @@ public class Validation_Master {
 
 
 
-	public void setcFField(Standard_Object_Attributes cFField) {
+	public void setcFField(StandardObjectMappingMaster cFField) {
 		this.cFField = cFField;
 	}
 
@@ -106,8 +106,8 @@ public class Validation_Master {
 
 
 
-	public Validation_Master(int id, Standard_Object_Attributes cFField, Work_Request_Type_Master workRequestTypeId,
-			boolean isRequired) {
+	public Validation_Master(int id, StandardObjectMappingMaster cFField, Work_Request_Type_Master workRequestTypeId,
+                             boolean isRequired) {
 		super();
 		Id = id;
 		this.cFField = cFField;

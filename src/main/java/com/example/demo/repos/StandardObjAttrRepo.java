@@ -6,11 +6,11 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.example.demo.model.Standard_Object_Attributes;
-import com.example.demo.model.Validation_Master;
+import com.example.demo.model.StandardObjectMappingMaster;
+
 //@RepositoryRestResource
 @RepositoryRestResource(collectionResourceRel = "standardobjattrrepo", path = "standardobjattrrepo")
-public interface StandardObjAttrRepo extends JpaRepository<Standard_Object_Attributes, Integer> {
+public interface StandardObjAttrRepo extends JpaRepository<StandardObjectMappingMaster, Integer> {
     @Cacheable("standardobjectattributes")
-	List<Standard_Object_Attributes> findAll();
+	List<StandardObjectMappingMaster> findAll();
 }
